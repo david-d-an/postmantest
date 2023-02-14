@@ -1,0 +1,69 @@
+{
+	"info": {
+		"name": "Localhost Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25123607"
+	},
+	"item": [
+		{
+			"name": "Cloudinary Webhook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"eager\": [\n    { \"secure_url\": \"https://my.video.url/path0/path1/path2/a/b/c/d/e/f/g/h/\" },\n    { \"secure_url\": \"https://my.video.url/path3/path4/path5\" }\n  ],\n  \"public_Id\": \"public Id\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/webhook/cloudinary/processcomplete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"webhook",
+						"cloudinary",
+						"processcomplete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clone Asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"spaceName\": \"MySpace\",\n        \"spaceOwner\": \"TestOwner\",\n        \"assetType\": \"images\",\n        \"assetId\": \"asdf8wf\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/frame-vr-dev/us-central1/cloneAsset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"frame-vr-dev",
+						"us-central1",
+						"cloneAsset"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
